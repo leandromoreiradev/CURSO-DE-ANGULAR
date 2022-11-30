@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiretivasEstruturaisComponent implements OnInit{
   public condition: boolean = true;
+  public conditionClick: boolean = true;
 
   ngOnInit(): void {
     setInterval(() => {
@@ -16,5 +17,13 @@ export class DiretivasEstruturaisComponent implements OnInit{
       this.condition = true;
      }
     }, 2000)
+  }
+
+  public onClick() {
+    if(this.conditionClick) {
+      this.conditionClick = false;
+     } else {
+      this.conditionClick = true;
+     }
   }
 }
