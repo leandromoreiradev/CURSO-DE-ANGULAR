@@ -14,6 +14,8 @@ export class DiretivasEstruturaisComponent implements OnInit{
     {nome:"Izabel", idade: 19}
   ];
 
+public nome: string = 'dener';
+
   ngOnInit(): void {
     setInterval(() => {
      if(this.condition) {
@@ -40,4 +42,6 @@ export class DiretivasEstruturaisComponent implements OnInit{
     //removendo item da lista
     this.list.splice(event, 1);
   }
+
+
 }

@@ -1,5 +1,9 @@
 <h2>Interpolation</h2>
 
+<!--Renderiamos o alor de uma variavel atraves do {{variavel}}
+    onde la no component.ts são declaradas
+-->
+
 <p>{{ nome }} tem idade {{ idade }} anos.</p>
 
 <p>{{ nome }} tem mais de 28 anos?</p>
@@ -11,12 +15,23 @@
 <hr>
 
 <h2>Property Binding</h2>
+
+<!--Podemos passar valores para as propriedades do HTML [prorpeiedade]=valor
+    ex: valor boleano, uma url de imagem etc.
+-->
+
 <button [disabled]="checkedDisabled">Button</button>
 <img [src]="imgSrc" [title]="imgTitle">
 
 <hr>
 
 <h2>Event Binding</h2>
+
+<!--Aqui temos eventos que podem acionar funçoes como por ex:
+    o evento de (click) ao clicar chamamos uma funcao, e podemos
+    passar ou nao o evento para funcao
+    No evento passado possui todos os atributos do evento.
+-->
 
 <button (click)="alertaInfo($event)">Evento</button>
 <div (mousemove)="mouseMoveTeste($event)"style="background: red; width: 300px; height: 300px;"></div>
@@ -26,5 +41,8 @@ Posição do mouse = {{ position.x}} - {{ position.y}}
 <hr>
 
 <h2>Two-way databinding</h2>
+
+<!--Podemos alterar valores de input-variavel ou variavel-input ao mesmo tempo-->
+
 <input [(ngModel)]="nome">
 {{nome}}

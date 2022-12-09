@@ -1,6 +1,17 @@
 <h2>Diretivas estruturais</h2>
 
 <p>NGIF</p>
+
+<!--ngif é uma condição semelhante o if else
+    se a condição for satisfeita o elemento aparece na tela,
+    caso não seja satisfeita o elemento não aparece.
+
+    Podemos usar o else dando um alias e anotando esse alias com um #
+    em um elemento ng-template (precisa de outro elemento dentro do ng-template para ele funcionar)
+    que queremos que apareca caso a condicao não seja satisfeita;
+
+-->
+
 <p *ngIf="condition; else elseBlock">True</p>
 <ng-template #elseBlock>
   <p>False</p>
@@ -17,7 +28,13 @@
 <button (click)="onClick()">Clicar</button>
 
 <hr>
+
 <p>NGFOR</p>
+
+<!--ngFor é semelhante ao foreach ou seja, para cada item da lista de valores
+    imprima eles na tela
+-->
+
 <ul>
   <li *ngFor="let item of list; let i = index">[{{i}}]Nome = {{item.nome}} - idade = {{item.idade}}
     <button (click)="onclickEventList(i)">remove</button>
@@ -25,3 +42,26 @@
 </ul>
 
 <button (click)="onClickAddList()">Add</button>
+
+<hr>
+
+<p>NGSWITCH</p>
+
+<!--ngSwitch é o switch ou seja, condicao caso nome = dener imprime dener,
+    caso condicao nome = nay imprime nay e por default caso não atender nenhum então
+    imprimimos  "Deu ruim sua busca"
+ -->
+
+<input type="text" [(ngModel)]="nome">
+
+<div [ngSwitch]="nome">
+  <p *ngSwitchCase="'dener'">
+    Dener
+  </p>
+  <p *ngSwitchCase="'nay'">
+    Nay
+  </p>
+  <p *ngSwitchDefault>
+    Deu ruim sua busca
+  </p>
+</div>
