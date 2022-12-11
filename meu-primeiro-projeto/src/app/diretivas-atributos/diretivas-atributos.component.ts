@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { throwIfEmpty } from 'rxjs';
 
 @Component({
   selector: 'app-diretivas-atributos',
@@ -10,6 +11,11 @@ export class DiretivasAtributosComponent implements OnInit{
   public valor: boolean = true;
   public height: string = "20px";
   public backgroundColor: string = "tomato";
+  public nome: string = "";
+  public list: Array<{nome: string}> = [];
+  public date: Date = new Date();
+
+
 
   ngOnInit(): void {
 
@@ -30,5 +36,10 @@ export class DiretivasAtributosComponent implements OnInit{
 
     }, 2000)
 
+  }
+
+  public salvar() {
+    this.list.push({nome: this.nome})
+    this.nome = "";
   }
 }
