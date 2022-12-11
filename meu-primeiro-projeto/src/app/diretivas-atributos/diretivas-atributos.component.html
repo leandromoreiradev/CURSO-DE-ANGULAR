@@ -1,0 +1,17 @@
+<h2>diretivas-atributos</h2>
+
+<!--Diretivas de atrubutos mudam os atributos do elemento-->
+
+<p>NGCLASS</p>
+
+<!--permite definir uma classe dinâmicamente a partir do DOM de um elemento por meio de condições
+    no caos abaixo tempos a prorpiedade valor no component.ts valor=true
+-->
+
+<div [ngClass]="{'active': valor, 'disable': !valor}">NgClass</div>
+
+<p>NGSTYLE</p>
+
+<!--permite alterar o valor da propriedade css-->
+
+<div [ngStyle]="{'height': height, 'background': backgroundColor }">NgStyle</div>
