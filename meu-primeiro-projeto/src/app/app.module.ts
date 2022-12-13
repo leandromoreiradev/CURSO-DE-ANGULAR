@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
