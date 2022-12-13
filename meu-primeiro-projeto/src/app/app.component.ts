@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
 
   public addValue: number = 0;
+  public getDados: {nome: string, idade: number} | undefined;
 
   constructor(){}
 
@@ -21,5 +22,8 @@ export class AppComponent implements OnInit {
      this.addValue +=  1;
   }
 
+  public setDados(event: {nome: string, idade: number}) {
+    this.getDados = event;
+  }
 
 }
